@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const title = require('./lib/title');
 var favicon = require('serve-favicon');
+const path = require('path')
 
 // view setting
 app.set('views','./views')
@@ -9,7 +10,10 @@ app.set('view engine', 'ejs');
 
 // 정적 파일 사용
 app.use(express.static('public'));
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+//favicon 설정
+
+const faviconPath = path.join(__dirname, 'public', 'images', 'favicon.ico');
+app.use(favicon(faviconPath));
 
 //라우터 지정
 var parkingRouter = require('./router/parkingRouter');
