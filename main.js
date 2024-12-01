@@ -28,3 +28,5 @@ var port = 3000;
 app.listen(port, ()=>{
     console.log(`connected to port : ${port}`);
 })
+
+module.exports= app;
