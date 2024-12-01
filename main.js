@@ -5,7 +5,7 @@ var favicon = require('serve-favicon');
 const path = require('path')
 
 // view setting
-app.set('views',__dirname + 'views')
+app.set('views', path.join(__dirname + 'views'));
 app.set('view engine', 'ejs');
 
 // 정적 파일 사용
