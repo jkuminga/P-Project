@@ -9,7 +9,7 @@ app.set('views', path.join(__dirname , 'views'));
 app.set('view engine', 'ejs');
 
 // 정적 파일 사용
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));    
 //favicon 설정
 
 const faviconPath = path.join(__dirname, 'public', 'images', 'favicon.ico');
