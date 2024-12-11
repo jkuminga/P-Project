@@ -6,6 +6,9 @@ router.get('/aispace', (req ,res)=>{
     parking.aispace(req, res);
 })
 
+router.post('/receiver', (req, res)=>{
+    parking.receiver(req,res)
+})
 
 router.get('/center',(req, res)=>{
     parking.center(req, res)

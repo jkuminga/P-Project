@@ -5,14 +5,18 @@ var favicon = require('serve-favicon');
 const path = require('path')
 // const cloudinary = require('./indexGPT');
 
+//body-parser
+app.use(express.json()); // JSON 데이터 파싱
+app.use(express.urlencoded({ extended: true })); // URL-encoded 데이터 파싱
+
 // view setting
 app.set('views', path.join(__dirname , 'views'));
 app.set('view engine', 'ejs');
 
 // 정적 파일 사용
 app.use(express.static(path.join(__dirname, 'public')));    
-//favicon 설정
 
+//favicon 설정
 const faviconPath = path.join(__dirname, 'public', 'images', 'favicon.ico');
 app.use(favicon(faviconPath));
 
@@ -24,10 +28,6 @@ app.use('/parking', parkingRouter);
 app.get('/', (req, res)=>{
     title.home(req, res)
 })
-
-
-//favicon.ico setting
-
 
 //listen
 var port = 3000;
