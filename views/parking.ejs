@@ -6,8 +6,12 @@
     </head>
     <body>
         <h1><%= title %> 주차장 혼잡도 여부</h1>
-        <!-- <img src="/image/example.png" style="width:200px;height: 100px;display:block;margin-top:10px;"> -->
-        <img src="/images/example.png">
+        <div>
+            <a>최근 새로고침 시간:<%= data.lastUpdated %></a>
+            <button><a href="/parking/refresh/<%= status %>">새로고침</a></button>
+        </div>
+        
+        <img src='<%= data.imageUrl %>'>
         <button><a href="/">홈으로 돌아가기</a></button>
     </body>
 </html>

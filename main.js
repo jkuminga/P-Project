@@ -3,6 +3,7 @@ const app = express();
 const title = require('./lib/title');
 var favicon = require('serve-favicon');
 const path = require('path')
+const cloudinary = require('./indexGPT');
 
 // view setting
 app.set('views', path.join(__dirname , 'views'));
