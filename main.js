@@ -3,7 +3,7 @@ const app = express();
 const title = require('./lib/title');
 var favicon = require('serve-favicon');
 const path = require('path')
-const cloudinary = require('./indexGPT');
+// const cloudinary = require('./indexGPT');
 
 // view setting
 app.set('views', path.join(__dirname , 'views'));
@@ -31,7 +31,7 @@ app.get('/', (req, res)=>{
 
 //listen
 var port = 3000;
-// var PORT = process.env.PORT || 3000;
+
 app.listen(port, ()=>{
     console.log(`connected to port : ${port}`);
 })
